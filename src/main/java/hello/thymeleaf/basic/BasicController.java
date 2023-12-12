@@ -80,7 +80,17 @@ public class BasicController {
         model.addAttribute("data", "Spring!");
         return "basic/literal";
     }
-    @GetMapping
+
+    @GetMapping("/operation")
+    public String operation(Model model) {
+        model.addAttribute("nullDate", null);
+        model.addAttribute("data", "Spring!");
+        return "basic/operation";
+    }
+    @GetMapping("/attribute")
+    public String attribute() {
+        return "basic/attribute";
+    }
 
     @Data
     static class User {
